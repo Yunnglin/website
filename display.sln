@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{BE4A5832-899
 		css\bootstrap-reboot.min.css = css\bootstrap-reboot.min.css
 		css\bootstrap.css = css\bootstrap.css
 		css\bootstrap.min.css = css\bootstrap.min.css
+		css\font-awesome.min.css = css\font-awesome.min.css
 		css\page.css = css\page.css
 	EndProjectSection
 EndProject
