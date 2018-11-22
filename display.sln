@@ -13,11 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "html", "html", "{6BFD9082-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{BE4A5832-8991-4C40-9AE2-9FBD35A5FC3F}"
 	ProjectSection(SolutionItems) = preProject
-		css\bootstrap-grid.css = css\bootstrap-grid.css
 		css\bootstrap-grid.min.css = css\bootstrap-grid.min.css
-		css\bootstrap-reboot.css = css\bootstrap-reboot.css
 		css\bootstrap-reboot.min.css = css\bootstrap-reboot.min.css
-		css\bootstrap.css = css\bootstrap.css
 		css\bootstrap.min.css = css\bootstrap.min.css
 		css\font-awesome.min.css = css\font-awesome.min.css
 		css\page.css = css\page.css
@@ -25,11 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{BE4A5832-899
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{F019AD63-AE94-46B4-B25E-543915C58260}"
 	ProjectSection(SolutionItems) = preProject
-		scripts\bootstrap.bundle.js = scripts\bootstrap.bundle.js
 		scripts\bootstrap.bundle.min.js = scripts\bootstrap.bundle.min.js
-		scripts\bootstrap.js = scripts\bootstrap.js
 		scripts\bootstrap.min.js = scripts\bootstrap.min.js
-		scripts\jquery-3.3.1.js = scripts\jquery-3.3.1.js
 		scripts\jquery-3.3.1.min.js = scripts\jquery-3.3.1.min.js
 		scripts\jqueryFunc.js = scripts\jqueryFunc.js
 	EndProjectSection
