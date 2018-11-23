@@ -1,77 +1,113 @@
-/*#nav-bar {
-    margin: 0;
-    padding: 0;
-}*/
+body {
+    position: relative;
+}
 
+    body::-webkit-scrollbar { /*滚动条整体样式*/
+        width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+        height: 4px;
+    }
+    body::-webkit-scrollbar { /*滚动条整体样式*/
+        width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+        height: 4px;
+    }
 
+    body::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+        border-radius: 5px;
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: rgba(0,0,0,0.2);
+    }
+
+        body::-webkit-scrollbar-thumb:hover {
+            cursor:auto;
+            background: rgba(0,0,0,0.3);
+        }
+
+    body::-webkit-scrollbar-track { /*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 0;
+        background: rgba(0,0,0,0.1);
+    }
+
+p.lead {
+    padding-left: 100px;
+}
+
+/*标题*/
+.jumbotron {
+    border-radius: 4px;
+    background-color: antiquewhite;
+}
+/*导航*/
+#mobile-menu {
+    position: sticky;
+    width: 120px;
+    top: 20px;
+    left:100px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    z-index: 9999;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+#mobile-menu:hover{
+    transform:scale(1.06);
+}
 a:hover, a:focus {
     text-decoration: none
 }
 
 .mobile-nav ul li a {
-
     color: rgba(27, 209, 203, 0.96);
     display: block;
     padding: 8px 16px;
-    border-top: 1px solid rgba(10, 130, 126, 0.96);
-    border-bottom: 1px solid rgba(8, 134, 130, 0.96);
-    transition: all 0.2s ease-in-out;
     cursor: pointer;
-    align-content:center;
-}
-
-#mobile-menu {
-    position:absolute;
-    width: 100px;
-    margin-top: 20px;
-    margin-left:-60px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
-    z-index: 9999;
-    transition: all 0.3s ease-in-out;
 }
 
 
+    .mobile-nav ul li a:hover {
+        color: #ffffff;
+    }
 
-.mobile-nav ul li a:hover {
-    background-color: #23A1F6;
-    color: #ffffff;
+.mobile-nav ul li {
+    border-bottom: 1px solid rgb(129, 121, 121);
 }
+
+    .mobile-nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .mobile-nav ul li:hover {
+        background-color: #23A1F6;
+        border-radius: 4px;
+    }
 
 .show-nav {
-    transform: translateX(150px);
+ transform:translateX(0px);
 }
 
 .hide-nav {
-    transform: translateX(-100px);
+    transform:translateX(-300px);
 }
-.hide-taggle {
-    transform: translateX(0);
-}
-.show-taggle {
-    transform: translateX(220px);
-}
-/*侧滑关键*/
+
 #mobile-nav-taggle {
     height: 35px;
     line-height: 35px;
     width: 35px;
     background-color: #23A1F6;
     color: #ffffff;
-    display: inline-block;
+    display: block;
     text-align: center;
     cursor: pointer;
-    border-radius:50%;
-    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
 }
 
-.nav.avbar-inverse {
-    position: relative;
-}
 
 #nav-btn {
-    position: absolute;
-    left: 20px;
+    position: sticky;
     top: 20px;
+    left: 10px;
+}
+
+.article {
+    position: relative;
 }

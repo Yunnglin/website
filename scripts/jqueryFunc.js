@@ -6,10 +6,10 @@ $(document).ready(function () {
         if (mobileMenu.hasClass("show-nav")) {
             setTimeout(function () {
                 mobileMenu.addClass("hide-nav").removeClass("show-nav");
-                //nav_btn.addClass("hide-taggle").removeClass("show-taggle");
+               // document.getElementById("mobile-menu").style.webkitTransform = "translateX(-100px)";
             }, 100)
             setTimeout(function () {
-                document.getElementById("mobile-menu").style.display = "none"; //设置EleId标签隐藏
+                document.getElementById("mobile-menu").style.visibility = "hidden"; //设置标签隐藏
             }, 500)
           
            
@@ -17,10 +17,11 @@ $(document).ready(function () {
         else {
             setTimeout(function () {
                 mobileMenu.addClass("show-nav").removeClass("hide-nav");
-                // nav_btn.addClass("show-taggle").removeClass("hide-taggle");
+                //document.getElementById("mobile-menu").style.width="200px";
             }, 100)
-            document.getElementById("mobile-menu").style.display = "inline"; //设置EleId标签显示
+            document.getElementById("mobile-menu").style.visibility = "visible"; //设置标签显示
         }
     })
-  
+
+    $('body').scrollspy({ target: '#nav-bar' })
 });
