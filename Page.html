@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/page.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <!-- .js  -->
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
@@ -18,15 +19,26 @@
 <body>
     <!--fluid容器  -->
     <div class="container-fluid">
+        <div class="hearder">
+            <figure class="overlay-figure">
+                <div class="overlay-figure-content">
 
-        <div id="hearder">
+                    <img class="head-img" src="resource/picture/nowisee3.jpg"/>
 
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container head">
-                    <h1 class="display-4">电影介绍</h1>
-                    <p class="lead">Moviehub  --发现好电影</p>
+                    <div class="overlay-figure-background"></div>
                 </div>
-            </div>
+                <figcaption class="overlay-figure-caption">
+                    <div class="contents">
+                        <div class="contents-stack">
+                            <p class="title" style="font-family:Harrington; font-size: 75px;color:rgb(255, 255, 255)">Movie Introduction </p>
+                            <div class="separator"></div>
+                            <p class="text" style="font-family:Harrington;font-size:20px;">By the end of all
+                                <br/>can you see it?
+                                </p>
+                        </div>
+                    </div>
+                </figcaption>
+            </figure>
 
         </div>
 
@@ -34,10 +46,10 @@
             <!--中间内容-->
             <div class="row">
                 <div class="col-3">
-                        <!--导航栏侧滑按钮-->
+                    <!--导航栏侧滑按钮-->
                     <div class="nav-btn visible-xs visible-sm" id="nav-btn">
                         <div class="mobile-nav-taggle" id="mobile-nav-taggle">
-                            <i class="icon-reorder"></i>
+                            <i class=" fa fa-th-list"></i>
                         </div>
                     </div>
 
@@ -46,46 +58,170 @@
                         <ul id="nav-bar" class="nav nav-pills nav-fill flex-column">
                             <li class="nav-item"><a class="nav-link" href="#intro">简  介</a></li>
                             <li class="nav-item"><a class="nav-link" href="#plot">剧  情</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#still">剧  照</a></li>
                             <li class="nav-item"><a class="nav-link" href="#review">影  评</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#bescene">幕  后</a></li>
                         </ul>
                     </nav>
 
                 </div>
                 <div class="col-9">
                     <div class="article">
-                        <div id="intro">
-                            <h2 >简  介</h2>
+                        <div id="intro" class="card">
+                            <h2 class="card-header">简  介</h2>
+                            <!--名称 导演 演员 上映时间-->
+                            <img id="poster" class="card-img-bottom" src="resource/picture/复联1.jpg" />
+                            <div class="card-body">
+                                <h4 id="title" class="card-title">复仇者联盟3：无限战争</h4>
+                                <h5 id="subtitle" class="card-subtitle">Avengers: Infinity War</h5>
+                                <br />
+                                <p class="card-text">导演：<span id="director">安东尼·罗素</span></p>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Vestibulum id metus ac nisl bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet sagittis. In tincidunt orci sit amet elementum vestibulum. Vivamus fermentum in arcu in aliquam. Quisque aliquam porta odio in fringilla. Vivamus nisl leo, blandit at bibendum eu, tristique eget risus. Integer aliquet quam ut elit suscipit, id interdum neque porttitor. Integer faucibus ligula.</p>
-                            <p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus.</p>
+                                <p class="card-text">演员：<span id="actor">小罗伯特·唐尼 / 克里斯·海姆斯沃斯 / 克里斯·埃文斯 / 马克·鲁弗洛 / 乔什·布洛林</span></p>
+                                <p class="card-text">上映时间：<span id="show-time">2018-05-11(中国大陆) / 2018-04-23(加州首映) / 2018-04-27(美国)</span></p>
+                                <p class="card-text">评分：<span id="marks">8.1 /10</span></p>
+                                <p class="card-text">片长：<span id="length">150 mins</span></p>
+                            </div>
+
+
                         </div>
                         <hr />
-                        <div id="plot">
-                            <h2 >剧  情</h2>
-
-                            <p>Nullam hendrerit justo non leo aliquet imperdiet. Etiam in sagittis lectus. Suspendisse ultrices placerat accumsan. Mauris quis dapibus orci. In dapibus velit blandit pharetra tincidunt. Quisque non sapien nec lacus condimentum facilisis ut iaculis enim. Sed viverra interdum bibendum. Donec ac sollicitudin dolor. Sed fringilla vitae lacus at rutrum. Phasellus congue vestibulum ligula sed consequat.</p>
-                            <p>Vestibulum consectetur scelerisque lacus, ac fermentum lorem convallis sed. Nam odio tortor, dictum quis malesuada at, pellentesque vitae orci. Vivamus elementum, felis eu auctor lobortis, diam velit egestas lacus, quis fermentum metus ante quis urna. Sed at facilisis libero. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum bibendum blandit dolor. Nunc orci dolor, molestie nec nibh in, hendrerit tincidunt ante. Vivamus sem augue, hendrerit non sapien in, mollis ornare augue.</p>
+                        <div id="plot" class="card">
+                            <h2 class="card-header">剧  情</h2>
+                            <span id="movie-intro" class="card-body">最先与灭霸军团遭遇的雷神索尔一行遭遇惨烈打击，洛基遇害，空间宝石落入灭霸之手。未几，灭霸的先锋部队杀至地球，一番缠斗后掳走奇异博士。为阻止时间宝石落入敌手，斯塔克和蜘蛛侠闯入了敌人的飞船。与此同时，拥有心灵宝石的幻视也遭到外星侵略者的袭击，为此美国队长、黑寡妇等人将其带到瓦坎达王国，向黑豹求助。幸免于难的索尔与星爵一行相逢，随后他们兵分两路。索尔与火箭、格鲁特踏上再铸雷神之锤的旅程，星爵则与卡魔拉等人试图阻止灭霸的恶行。而知晓灵魂宝石下落的卡魔拉，同样是其义父灭霸追踪的对象。 
+　　                      <br />
+                                攸关整个宇宙命运的史诗战役全面展开，超级英雄们为了平凡而自由的生命奋不顾身……
+                            </span>
                         </div>
                         <hr />
-                        <div id="review">
-                            <h2 >影  评</h2>
 
-                            <p>Integer pulvinar leo id risus pellentesque vestibulum. Sed diam libero, sodales eget sapien vel, porttitor bibendum enim. Donec sed nibh vitae lorem porttitor blandit in nec ante. Pellentesque vitae metus ipsum. Phasellus sed nunc ac sem malesuada condimentum. Etiam in aliquam lectus. Nam vel sapien diam. Donec pharetra id arcu eget blandit. Proin imperdiet mattis augue in porttitor. Quisque tempus enim id lobortis feugiat. Suspendisse tincidunt risus quis dolor fringilla blandit. Ut sed sapien at purus lacinia porttitor. Nullam iaculis, felis a pretium ornare, dolor nisl semper tortor, vel sagittis lacus est consequat eros. Sed id pretium nisl. Curabitur dolor nisl, laoreet vitae aliquam id, tincidunt sit amet mauris.</p>
-                            <p>Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget ante rutrum adipiscing. Cras interdum ipsum mattis, tempus mauris vel, semper ipsum. Duis sed dolor ut enim lobortis pellentesque ultricies ac ligula. Pellentesque convallis elit nisi, id vulputate ipsum ullamcorper ut. Cras ac pulvinar purus, ac viverra est. Suspendisse potenti. Integer pellentesque neque et elementum tempus. Curabitur bibendum in ligula ut rhoncus.</p>
-                            <p>Quisque pharetra velit id velit iaculis pretium. Nullam a justo sed ligula porta semper eu quis enim. Pellentesque pellentesque, metus at facilisis hendrerit, lectus velit facilisis leo, quis volutpat turpis arcu quis enim. Nulla viverra lorem elementum interdum ultricies. Suspendisse accumsan quam nec ante mollis tempus. Morbi vel accumsan diam, eget convallis tellus. Suspendisse potenti.</p>
+                        <div id="still" class="card">
+                            <h2 class="card-header">剧  照</h2>
+                            <div class="card-body">
+
+                                <div id="picture" class="carousel slide" data-ride="carousel">
+
+                                    <!-- 指示符 -->
+                                    <ul class="carousel-indicators">
+                                        <li data-target="#picture" data-slide-to="0" class="active"></li>
+                                        <li data-target="#picture" data-slide-to="1"></li>
+                                        <li data-target="#picture" data-slide-to="2"></li>
+                                    </ul>
+
+                                    <!-- 轮播图片 -->
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="resource/picture/nowisee1.jpg" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="resource/picture/nowisee2.jpg" />
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="resource/picture/nowisee3.jpg" />
+                                        </div>
+                                    </div>
+
+                                    <!-- 左右切换按钮 -->
+                                    <a class="carousel-control-prev" href="#picture" data-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#picture" data-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </a>
+
+                                </div>
+
+                            </div>
                         </div>
+
+
                         <hr />
-                        <div id="bescene">
-                            <h2 >幕  后</h2>
-
-                            <p>Suspendisse a orci facilisis, dignissim tortor vitae, ultrices mi. Vestibulum a iaculis lacus. Phasellus vitae convallis ligula, nec volutpat tellus. Vivamus scelerisque mollis nisl, nec vehicula elit egestas a. Sed luctus metus id mi gravida, faucibus convallis neque pretium. Maecenas quis sapien ut leo fringilla tempor vitae sit amet leo. Donec imperdiet tempus placerat. Pellentesque pulvinar ultrices nunc sed ultrices. Morbi vel mi pretium, fermentum lacus et, viverra tellus. Phasellus sodales libero nec dui convallis, sit amet fermentum sapien auctor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed eu elementum nibh, quis varius libero.</p>
-                            <p>Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Ut tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio. Phasellus auctor velit at lacus blandit, commodo iaculis justo viverra. Etiam vitae est arcu. Mauris vel congue dolor. Aliquam eget mi mi. Fusce quam tortor, commodo ac dui quis, bibendum viverra erat. Maecenas mattis lectus enim, quis tincidunt dui molestie euismod. Curabitur et diam tristique, accumsan nunc eu, hendrerit tellus.</p>
-                            <p>Phasellus fermentum, neque sit amet sodales tempor, enim ante interdum eros, eget luctus ipsum eros ut ligula. Nunc ornare erat quis faucibus molestie. Proin malesuada consequat commodo. Mauris iaculis, eros ut dapibus luctus, massa enim elementum purus, sit amet tristique purus purus nec felis. Morbi vestibulum sapien eget porta pulvinar. Nam at quam diam. Proin rhoncus, felis elementum accumsan dictum, felis nisi vestibulum tellus, et ultrices risus felis in orci. Quisque vestibulum sem nisl, vel congue leo dictum nec. Cras eget est at velit sagittis ullamcorper vel et lectus. In hac habitasse platea dictumst. Etiam interdum iaculis velit, vel sollicitudin lorem feugiat sit amet. Etiam luctus, quam sed sodales aliquam, lorem libero hendrerit urna, faucibus rhoncus massa nibh at felis. Curabitur ac tempus nulla, ut semper erat. Vivamus porta ullamcorper sem, ornare egestas mauris facilisis id.</p>
-                            <p>Ut ut risus nisl. Fusce porttitor eros at magna luctus, non congue nulla eleifend. Aenean porttitor feugiat dolor sit amet facilisis. Pellentesque venenatis magna et risus commodo, a commodo turpis gravida. Nam mollis massa dapibus urna aliquet, quis iaculis elit sodales. Sed eget ornare orci, eu malesuada justo. Nunc lacus augue, dictum quis dui id, lacinia congue quam. Nulla sem sem, aliquam nec dolor ac, tempus convallis nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla suscipit convallis iaculis. Quisque eget commodo ligula. Praesent leo dui, facilisis quis eleifend in, aliquet vitae nunc. Suspendisse fermentum odio ac massa ultricies pellentesque. Fusce eu suscipit massa.</p>
+                        <div id="review" class="card">
+                            <h2 class="card-header">影  评</h2>
+                            <div class="card-body" id="review-content">
+                                <div class="review-content clearfix" data-author="康anachronism" data-url="https://movie.douban.com/review/9358533/" data-original="1">
+                                    <p>在片尾自己消失之前，奇异博士对托尼说：There was no other way. </p>
+                                    <p>他做了什么？用时间宝石交换了托尼的性命。</p>
+                                    <p>在这部电影中，在他观看14000605种可能之前，他明确地对托尼和小蜘蛛说我会选择保护宝石，如果牺牲你们的性命也要这样做。这应该是一个伏笔——他做出了一个明显的改变。</p>
+                                    <p>显然，在他看到的唯一赢的一次里，他必须交出时间宝石。</p>
+                                    <p><span style="font-weight: bold;">逆转未来？蚁人出场</span></p>
+                                    <div class="image-container image-float-center">
+                                        <div class="image-wrapper">
+                                            <img src="https://img3.doubanio.com/view/thing_review/l/public/p1499560.jpg" width="1200">
+                                        </div>
+                                        <div class="image-caption-wrapper">
+                                            <div class="image-caption">https://goo.gl/images/5mgeU7</div>
+                                        </div>
+                                    </div>
+                                    <p>《复仇者4》的片场照里，托尼，美队和蚁人在一起。搜索Avengers 4 Captain America Ant Man会看到不少片场照。重点是美队穿着一代战服，班纳也在，这应该就是2012年的纽约之战。</p>
+                                    <p>虽然觉得“逆转未来”有点套路了，但根据这些图难免会有这样的猜测——蚁人显然本不该出现在2012年的战役中。</p>
+                                    <p>也许并不是只有蚁人才能“回去”，但选择他势必有其道理。黄蜂女也许也可以，总之，这应该涉及到技术本身——Pym Particals. 蚁人在第一部曾进入到微观世界，并且险些困在其中。毕竟蚁人电影里面的宏观物理规律都成谜，比如东西变大变小之后编剧说多重就多重。微观的话……就有更多可能了。</p>
+                                    <p>X战警里选择金刚狼来逆转未来，是因为只有他的身体能抵挡住时空的扭曲（是这么说的吗）。而选择蚁人可能是因为他见过原子长什么样？缩到多小才能逆转？或者说在量子世界跑一跑，就从2012年的出口回去，来个literally“以空间换时间”如何？</p>
+                                    <p>按理说蚁人是复仇者联盟成立的关键人物，但他直到《美队3》才跟大家见面。如果这么一逆转未来，蚁人真的成为复联成立初期的关键大人物了。</p>
+                                    <p>或许只凭借Pym博士的科技不足以时空旅行。不知道要做到这一点还需要哪个英雄来帮忙。</p>
+                                    <p>或者还是要依靠时间宝石？</p>
+                                    <p>那么也欢迎重回片场，Loki.</p>
+                                    <p><span style="font-weight: bold;">托尼，唯一方法的一部分？</span></p>
+                                    <p>总觉得蚁人目前在MCU的咖位显然还不足够撑起改变整条故事线的重任。联想到《复联2》托尼的梦境，以及他在MCU中的重要程度，奇异博士都用了时间宝石来换取他活下去，感觉他还是会是那个更重要的角色。</p>
+                                    <p>钢铁侠也在“2012”的片场。虽然什么确凿的证据，但个人感觉这个钢铁侠是2018年之后的托尼——也回到2012年去了。他可能要把重要的东西带回去。是个信息？还是他这几年的新技术，比如《美队3》中的B.R.A.F.（根据漫威百科，B.R.A.F.技术是对海马体的影响/记忆的修改）呢。</p>
+                                    <p>“脱掉这身战甲你还剩什么？”虽然这个问题在《钢铁侠3》里就已经给出足够的回答，但也许下一部会有更好的回答。另外在这一部里他奋不顾身对抗灭霸时，也已是“衣不蔽体”，这一段实在太令人动容。不管穿不穿战甲，他都是唯一的钢铁侠。</p>
+                                    <p>一个不太靠谱的脑洞：蚁人和铁人可能没去2012年，而是去了，谁的脑袋里？（真的是“脑洞”）</p>
+                                    <p><span style="font-weight: bold;">鹰眼又回来了</span></p>
+                                    <p>内战后的鹰眼按说已经退休，在漫威新出的漫画 <span style="font-style: italic;">Infinity War Preclude</span> 里也是如此，专注于自己的家庭。蚁人也回家看小女儿了。</p>
+                                    <p>但在《复联3》中鹰眼的名字就被提到两次（美队和战争机器的对话，以及彩蛋中的局长也要找他）。鹰眼已经确定出现《复联4》（有片场照），或许他家人的蒸发会让他重新拿起武器。另外也有可能，即复联4里出场的鹰眼——就是2012年的鹰眼。又或许两者都有。</p>
+                                    <div class="image-container image-float-center">
+                                        <div class="image-wrapper">
+                                            <img src="https://img3.doubanio.com/view/thing_review/l/public/p1502414.jpg" width="1720">
+                                        </div>
+                                    </div>
+                                    <p>作为《复联2》看起来真正的男主，再让他carry全宇宙不太好了吧，个人估计主要是来耍耍帅的。</p>
+                                    <p><span style="font-weight: bold;">惊奇队长</span></p>
+                                    <p>作为彩蛋的主题，惊奇队长一定出现。MCU里她具体技能还不确定，总之编剧说你多强就多强吧。</p>
+                                    <p><span style="font-weight: bold;">宝石的集中是必需的？</span></p>
+                                    <p>这一段更多是我的脑洞。</p>
+                                    <p>奇异博士看到的那么多可能性里，一次也没有夺下来过手套吗？也许夺下来也没有用吧。</p>
+                                    <p>电影中托尼和幻视（思想中有一部分来自斯塔克）都动过破坏宝石的念头。</p>
+                                    <p>而灭霸想要6颗石头。他至少想要宝石免于破坏，意识宝石碎了都要强行恢复。</p>
+                                    <p>（博士甚至可以说是要灭霸去“救”这些宝石？）</p>
+                                    <p>可能，只有这样才能集齐宝石，从而做些什么？比如只有这样才能让灭霸采取打响指的方式（使得一半人还有复活的机会？）而不是用直接杀的方式。</p>
+                                    <p>或许宝石的集中也能为主角们所应用。</p>
+                                    <p><span style="font-weight: bold;">消失的人去了哪里？</span></p>
+                                    <p><span style="font-weight: bold;">应该是灵魂宝石。</span></p>
+                                    <p>（在这个空间里，建议Gamora对星爵先拳打脚踢一顿）</p>
+                                    <p>《银护2》中那个金色的神秘人叫做亚当，应该就是魔导士/亚当。漫画里的他是灵魂空间的重要角色。只是关于他的铺垫在MCU中出现的太少了，原本属于他的一些重要任务，或许要别人先承担一下。这个铺垫可能预示着银护3中亚当会亮相。</p>
+                                    <div class="image-container image-float-center">
+                                        <div class="image-wrapper">
+                                            <img src="https://img3.doubanio.com/view/thing_review/l/public/p1500791.jpg" width="2208">
+                                        </div>
+                                    </div>
+                                    <div class="image-container image-float-center">
+                                        <div class="image-wrapper">
+                                            <img src="https://img3.doubanio.com/view/thing_review/l/public/p1500792.jpg" width="2208">
+                                        </div>
+                                    </div>
+                                    <p><span style="font-weight: bold;">阿斯嘉德还活着一半人</span></p>
+                                    <p>电影中出现了这个表达。女武神确定会参演下一部。所以，阿斯嘉德是怎么只死了一半人的？女武神是啥时候走的？</p>
+                                    <p><span style="font-weight: bold;">总之</span></p>
+                                    <p>大概会是这样：奇异博士说这是唯一的方式，蚁人（可能还有托尼）带着重要任务回到2012，托尼会用知识回应灭霸说的“你被知识诅咒”，惊奇队长至关重要（可能是穿越过程中对于能量的操控）。</p>
+                                    <p>还是希望电影到时候给我们带来更多意想不到的惊喜吧。</p>
+                                    <p>想到什么再补充。</p>
+                                    <p>PS 魔法是可以进入微观世界的吗？在奇异博士单体电影里，古一第一次带他去了各种万千世界。我认为编剧也完全可以说YES. </p>
+                                    <p>PS2 小辣椒可能会在下一部中参与战斗（电视节目里表示曾经穿着“乒乓球”参与录制）。</p>
+                                    <div class="image-container image-float-center">
+                                        <div class="image-wrapper">
+                                            <img src="https://img3.doubanio.com/view/thing_review/l/public/p1500794.jpg" width="2208">
+                                        </div>
+                                    </div>
+                                    <p>PS3 霍华德鸭都已经出现在银护1彩蛋里来过一次了，真心希望他机甲大变身。</p>
+                                    <p>PS4 这个无限手套用一次就焦了，是不是好像七龙珠召集神龙一样，需要休息一阵子。</p>
+                                    <p>PS5 看着夕阳的时候真的不会觉得，只是用除以二这种二级运算，对以不同曲线增长的种群很不公平吗……</p>
+                                    <p>PS6 如果给关一帆一个机会，他也许会告诉灭霸，不要轻易改变宇宙总质量。“我从程心身上学到了很多。”</p>
+                                    <p></p>
+                                    <p>更新：灭霸对托尼说的“你不是唯一被知识诅咒的人”，我认为言下之意，应该是他自己也是一个被诅咒的人。他的屠杀行为的更深层原因应该会在下一部中揭示。第四部想必也不是“击败一个反派”这么简单。</p>
+                                </div>
+                            </div>
                         </div>
-                </div>
-                <!--article-->
+                    </div>
+                    <!--article-->
                 </div>
 
             </div>
@@ -93,9 +229,13 @@
         </div>
     </div>
 
+    <br />
 
-    <div id="footer">
-    </div>
+    <footer class="container-fluid">
+        <div id="footer">
+            <p>&copy;Moviehub &trade;	版权所有</p>
+        </div>
+    </footer>
 
 </body>
 </html>

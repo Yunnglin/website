@@ -1,11 +1,13 @@
 body {
     position: relative;
+    background: linear-gradient( 35deg, #f9ed3a,rgba(147, 35, 175, 0.7));
 }
 
-    body::-webkit-scrollbar { /*滚动条整体样式*/
-        width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
-        height: 4px;
-    }
+.card {
+    background-color: rgba(254, 254, 254, 0.6);
+    /*background: linear-gradient( 35deg, #ccffff, #ffcccc );*/
+}
+
     body::-webkit-scrollbar { /*滚动条整体样式*/
         width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
         height: 4px;
@@ -22,27 +24,21 @@ body {
             background: rgba(0,0,0,0.3);
         }
 
-    body::-webkit-scrollbar-track { /*滚动条里面轨道*/
-        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-        border-radius: 0;
-        background: rgba(0,0,0,0.1);
-    }
-
-p.lead {
-    padding-left: 100px;
+body::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    border-radius: 0;
+    background-color: #F5F5F5;
+    background: rgba(100,100,100,0.3);
 }
 
-/*标题*/
-.jumbotron {
-    border-radius: 4px;
-    background-color: antiquewhite;
-}
 /*导航*/
 #mobile-menu {
+    background: rgba(255,255,255,0.3);
     position: sticky;
+    position: -webkit-sticky;
     width: 120px;
     top: 20px;
-    left:100px;
+    left: 100px;
     border-radius: 4px;
     border: 1px solid #ddd;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
@@ -80,7 +76,10 @@ a:hover, a:focus {
         background-color: #23A1F6;
         border-radius: 4px;
     }
-
+    .mobile-nav ul li:active {
+        background-color: rgba(27, 209, 203, 0.96);
+        border-radius: 4px;
+    }
 .show-nav {
  transform:translateX(0px);
 }
@@ -100,14 +99,39 @@ a:hover, a:focus {
     cursor: pointer;
     border-radius: 50%;
 }
+    #mobile-nav-taggle:hover {
+        color: rgba(27, 209, 203, 0.96);
+    }
 
 
 #nav-btn {
     position: sticky;
+    position: -webkit-sticky;
     top: 20px;
     left: 10px;
 }
 
 .article {
     position: relative;
+}
+
+#footer {
+    height: 40px;
+    bottom: 0;
+    text-align: center;
+    background-color:rgba(127, 161, 153, 0.37);
+    color: #ffffff;
+    width:inherit;
+    border-radius:4px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#review-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
